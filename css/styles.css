@@ -307,3 +307,29 @@ nav h1 a {
   color: #666;
   font-size: 10pt;
 }
+
+/* ====================== Media Queries ====================== */
+
+/* 
+ * MIN 500px 
+ */
+@media screen and (min-width: 500px) {
+  nav h1 a {
+    font-size: 13pt;
+    letter-spacing: 10px;
+  }
+
+  .filter-options {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #restaurants-list {
+    top: 10vh;
+    right: 1vw;
+  }
+
+  #restaurant-container {
+    width: 50vw;
+  }
+}
