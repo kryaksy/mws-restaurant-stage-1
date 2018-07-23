@@ -1,6 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+}
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -107,12 +113,15 @@ nav h1 a {
 #map-container {
   position: fixed;
   height: 100vh;
+  transition: 0s;
 }
 #map {
+  width: 100vw;
   top: 11vh;
-  height: 100vh;
+  height: 100%;
   background-color: #ccc;
   z-index: 0;
+  transition: 0s;
 }
 /* ====================== Restaurant Filtering ====================== */
 #filtering-bar {
@@ -151,16 +160,16 @@ nav h1 a {
 #restaurants-list {
   position: absolute;
   top: 100vh;
+  width: 100vw;
   list-style: outside none none;
   margin: 0 0 10vh 0;
-  text-align: center;
   display: flex;
   flex-flow: column;
 }
 #restaurants-list li {
   background-color: #fff;
   font-family: Arial,sans-serif;
-  margin: 25px;
+  margin: 25px auto;
   min-height: 380px;
   text-align: center;
   width: 270px;
@@ -261,20 +270,20 @@ nav h1 a {
   /* border-bottom: 1px solid #d9d9d9; */
   /* border-top: 1px solid #fff; */
   padding: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 #restaurant-container {
   background-color: #fdfdfd;
   text-align: center;
-  margin-top: 70vh;
+  margin-top: 80vh;
   display: flex;
   flex-flow: column;
   width: 70vw;
-  box-shadow: 15px 15px 50px 2px #333;
+  box-shadow: 5px 5px 30px 2px #333;
 }
 #reviews-container {
   /* padding: 30px 40px 80px; */
-  width: 50vw;
+  width: 70vw;
 }
 #reviews-container h2 {
   color: #AD5700;
@@ -283,21 +292,16 @@ nav h1 a {
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
-#reviews-list {
-  margin: 0;
-  padding: 0;
-}
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 20px;
   position: relative;
-  width: 100%;
-  box-shadow: 15px 15px 50px 2px #333;
+  box-shadow: 5px 5px 20px 1px #333;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -308,6 +312,26 @@ nav h1 a {
 }
 
 /* ====================== Media Queries ====================== */
+
+/* 
+ * MAX 375px 
+ */
+ @media screen and (max-width: 375px) {
+  nav h1 a {
+    font-size: 9pt;
+    letter-spacing: 8px;
+  }
+  .filter-options select {
+    font-size: 9pt;
+    height: 6vh;
+    margin: 10px 5px;
+    padding: 5px;
+    width: 100vw;
+  }
+  #reviews-list li p {
+    font-size: 1.1em;
+  }
+}
 
 /* 
  * MIN 500px 
@@ -325,10 +349,11 @@ nav h1 a {
 
   #restaurants-list {
     top: 10vh;
+    width: 100vw;
     right: 1vw;
   }
 
-  #restaurant-container {
-    width: 50vw;
+  #restaurants-list li{
+    margin: 25px 20px 0px auto;
   }
 }
