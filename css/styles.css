@@ -123,7 +123,7 @@ nav h1 a {
 }
 .filter-options {
   width: 100%;
-  background-color: #3397DB;
+  background-color: #1F74AD;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -176,7 +176,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #AD5700;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 800;
@@ -190,7 +190,7 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #AD5700;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -229,7 +229,7 @@ nav h1 a {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #AD5700;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 800;
