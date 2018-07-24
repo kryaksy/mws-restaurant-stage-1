@@ -315,8 +315,8 @@ nav h1 a {
 
 /* ====================== Media Queries ====================== */
 
-/* 
- * MAX 375px 
+/*
+ * MAX 375px
  */
  @media screen and (max-width: 375px) {
   nav h1 a {
@@ -335,8 +335,8 @@ nav h1 a {
   }
 }
 
-/* 
- * MIN 500px 
+/*
+ * MIN 500px
  */
 @media screen and (min-width: 500px) {
   nav h1 a {
@@ -359,8 +359,8 @@ nav h1 a {
   }
 }
 
-/* 
- * MIN 1000px 
+/*
+ * MIN 1000px
  */
 @media screen and (min-width: 1000px) {
   #restaurants-list {
