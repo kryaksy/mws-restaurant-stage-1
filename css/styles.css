@@ -350,12 +350,20 @@ nav h1 a {
   }
 
   #restaurants-list {
-    top: 10vh;
     width: 100vw;
     right: 1vw;
   }
 
   #restaurants-list li{
     margin: 25px 20px 0px auto;
+  }
+}
+
+/* 
+ * MIN 1000px 
+ */
+@media screen and (min-width: 1000px) {
+  #restaurants-list {
+    top: 10vh;
   }
 }
