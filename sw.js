@@ -1,5 +1,11 @@
+/*
+ * Initialize cache name
+ */
 var staticCacheName = 'restaurant-cache-v1';
 
+/*
+ * URLs will be cached
+ */
 let urlToCache = [
     '/',
     '/restaurant.html',
@@ -20,6 +26,9 @@ let urlToCache = [
     '/js/dbhelper.js'
 ];
 
+/*
+ * Adding all URLs to cache
+ */
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(staticCacheName).then(cache => {
@@ -30,6 +39,9 @@ self.addEventListener('install', event => {
     );
 });
 
+/*
+ * FETCH listener to match request
+ */
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
@@ -39,6 +51,9 @@ self.addEventListener('fetch', event => {
     );
 });
 
+/*
+ * Activating new cache and delete the old one
+ */
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(cacheNames => {
